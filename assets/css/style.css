@@ -1,135 +1,232 @@
-/* ==============================
-   RESET / BASE
-============================== */
-* {
-    box-sizing: border-box;
+:root {
+    --black: #0b0b0b;
+    --dark: #121212;
+    --white: #f5f5f5;
+    --gold: #c9a14a;
 }
 
+/* BASE */
 body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background-color: #0f1f1a;
+    font-family: "Inter", sans-serif;
+    background: var(--black);
+    color: var(--white);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAV */
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-text {
+    color: #fff;
+}
+
+.logo {
+    letter-spacing: .25em;
+    font-size: .75rem;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../img/hero.png");
+    /* escurece a imagem */
+    z-index: 1;
+}
+
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    color: #fff;
+    margin-left: 50px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 6rem 0;
+}
+
+.bg-dark-soft {
+    background: var(--dark);
+}
+
+/* BUTTONS */
+.btn-gold {
+    border: 3px solid var(--gold);
     color: #ffffff;
+    padding: 14px 36px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: .85rem;
+    font-weight: 500;
 }
 
-/* ==============================
-   VIEWPORT FIX (MOBILE)
-============================== */
-.container-fluid {
-    min-height: 100svh;
+.btn-gold:hover {
+    background: var(--gold);
+    color: #000;
 }
 
-@supports not (height: 100svh) {
-    .container-fluid {
-        min-height: 100vh;
-    }
+.btn-outline-gold {
+    border: 1px solid rgba(201, 161, 74, .6);
+    color: var(--gold);
+    padding: 12px 32px;
+    font-size: .75rem;
+    font-weight: 400;
 }
 
-/* ==============================
-   LEFT IMAGE
-============================== */
-.login-bg {
-    background: url("../img/leafs.jpg") center / cover no-repeat;
+.btn-outline-gold:hover {
+    background-color: #c9a14a;
+    color: var(--black);
+    padding: 12px 32px;
+    font-size: .75rem;
 }
 
-/* ==================================================
-   RIGHT PANEL
-================================================== */
-
-/* 🔵 VERSÃO SÓLIDA (GUARDADA PARA CLIENTE) */
-/*
-.login-panel {
-    background-color: #0f1f1a;
-}
-*/
-
-/* 🟢 VERSÃO COM BLUR (ATIVA) */
-.login-panel {
-    background: rgba(15, 31, 26, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+/* PRODUCT GRID */
+.product-card {
+    background: var(--dark);
+    border: 1px solid rgba(255, 255, 255, .08);
+    height: 100%;
+    transition: all .4s ease;
 }
 
-/* ==============================
-   LOGIN CARD (GLASS)
-============================== */
-.login-card {
+.product-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.product-card img {
     width: 100%;
-    max-width: 420px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    height: 360px;
+    object-fit: cover;
 }
 
-/* ==============================
-   INPUTS
-============================== */
-.custom-input {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 0;
-    color: #ffffff;
+.product-info {
+    padding: 2rem;
 }
 
-.custom-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+.product-info h5 {
+    font-family: "Playfair Display", serif;
 }
 
-.custom-input:focus {
-    background: transparent;
-    box-shadow: none;
-    border-bottom-color: #ffffff;
-    color: #ffffff;
+.product-region {
+    font-size: .85rem;
+    opacity: .7;
 }
 
-/* ==============================
-   CHECKBOX
-============================== */
-.form-check-input {
-    background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.6);
+.price {
+    display: block;
+    color: var(--gold);
+    margin-top: .5rem;
 }
 
-.form-check-input:checked {
-    background-color: #1a5723;
-    border-color: #1a5723;
+/* PRODUCT PAGE */
+.product-image {
+    background: #000;
 }
 
-.form-check-input:focus {
-    box-shadow: none;
-    border-color: #1a5723;
+.product-meta {
+    list-style: none;
+    padding: 0;
 }
 
-/* ==============================
-   BUTTON
-============================== */
-.btn-dark {
-    background-color: #000000;
-    border: none;
+.product-meta li {
+    margin-bottom: .5rem;
+    font-size: .9rem;
+    opacity: .85;
 }
 
-.btn-dark:hover {
-    background-color: #111111;
+.price-lg {
+    font-size: 1.8rem;
+    color: var(--gold);
+    font-weight: 500;
 }
 
-/* ==============================
-   MOBILE FIXES
-============================== */
-@media (max-width: 768px) {
 
-    body {
-        overflow: hidden;
-    }
 
-    .login-panel {
-        padding: 1.5rem 1rem;
-    }
+/* CARDS */
+.category-card {
+    background: var(--dark);
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, .08);
+    height: 100%;
+}
 
-    .login-card {
-        margin: auto;
-        max-height: calc(100svh - 2rem);
-    }
+.category-card:hover {
+    border-color: var(--gold);
+    padding: 3rem;
+    height: 100%;
+}
+
+.category-card p {
+    margin: 1rem 0 2rem;
+    opacity: .8;
+}
+
+.category-card a {
+    font-size: .75rem;
+    letter-spacing: .15em;
+}
+
+.category-card.premium {
+    border-color: var(--gold);
+}
+
+/* IMAGE PLACEHOLDER */
+.image-placeholder {
+    height: 420px;
+    background: #000;
+}
+
+/* VIDEO */
+.video-hero {
+    min-height: 490px;
+}
+
+/* Produto */
+.produto-card {
+    background: var(--dark);
+    border: 1px solid rgba(255, 255, 255, .08);
+    height: 100%;
+    transition: all .4s ease;
+}
+
+.produto img {
+    width: 100%;
+    object-fit: fill;
+}
+
+
+/* FOOTER */
+.footer {
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    font-size: .75rem;
+    opacity: .7;
 }
