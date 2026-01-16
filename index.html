@@ -30,33 +30,33 @@
      NAVBAR
      No futuro: links dinâmicos vindos do admin
      ====================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-premium">
         <div class="container">
-            <a class="navbar-brand logo" href="#">
-                <!-- LOGO (ADMIN: alterar logo aqui no futuro) -->
-                WINE STORE
+            <a class="navbar-brand brand-mark" href="#">
+                <span class="brand-dot"></span> WINE STORE
             </a>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div id="nav" class="collapse navbar-collapse justify-content-end navbar-text ">
-                <ul class="navbar-nav gap-4">
-                    <li class="nav-item"><a class="nav-link" href="#">Vinhos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Reservas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Premium</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                    <li class="nav-item">
-                        <!-- CONTADOR DO CARRINHO -->
-                        <a class="nav-link" href="cart.html">
-                            Carrinho (<span id="cart-count">0</span>)
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link nav-link-premium" href="#vinhos">Vinhos</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-premium" href="#reservas">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-premium" href="#premium">Premium</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-premium" href="#contacto">Contacto</a></li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link cart-link" href="#carrinho">
+                            Carrinho <span class="cart-badge">0</span>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
 
     <!-- ======================================================
      HERO SECTION
@@ -65,27 +65,37 @@
      - título
      - subtítulo
      ====================================================== -->
-    <section class="hero d-flex align-items-center">
-        <div class="container">
-            <div class="col-lg-7">
-                <h1>
-                    <!-- ADMIN: título principal -->
-                    Uma Experiência em Cada Garrafa
-                </h1>
+    <header class="hero-premium" id="topo">
+        <!-- ADMIN: trocar imagem aqui -->
+        <div class="hero-bg" style="background-image:url('./assets/img/hero.png');"></div>
+        <div class="hero-overlay"></div>
 
-                <p class="ms-5">
-                    <!-- ADMIN: subtítulo / slogan -->
-                    Curadoria independente de vinhos selecionados pelo carácter, origem e tempo.
-                </p>
+        <div class="container hero-content">
+            <p class="hero-kicker">Curadoria & Excelência</p>
 
-                <a href="#" class="btn btn-gold ms-5 mt-3 ">
-                    <!-- ADMIN: texto do botão -->
-                    Explorar Coleção
-                </a>
+            <h1 class="hero-title">
+                Uma Experiência em<br class="d-none d-md-block"> Cada Garrafa
+            </h1>
+
+            <p class="hero-subtitle">
+                Curadoria independente de vinhos selecionados pelo caráter, origem e tempo.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#vinhos" class="btn btn-gold-cta">Explorar Coleção</a>
+                <a href="#premium" class="btn btn-ghost-cta">Ver Premium</a>
+            </div>
+
+            <div class="hero-trust mt-4">
+                <span>✔ Envio 24/48h</span>
+                <span>✔ Pagamento seguro</span>
+                <span>✔ Seleção criteriosa</span>
             </div>
         </div>
+    </header>
 
-        <!--
+
+    <!--
     ADMIN FUTURO:
     imagem de fundo do hero definida por CSS
     ex: background-image: url(...)
@@ -99,57 +109,41 @@
      - descrição
      - imagem (opcional)
      ====================================================== -->
-    <section class="section">
+    <section class="section-dark section-categories">
         <div class="container">
-            <div class="row g-5">
+            <div class="row g-4">
 
-                <!-- CATEGORIA 1 -->
                 <div class="col-md-4">
-                    <div class="category-card">
+                    <a href="#vinhos" class="category-card-premium">
+                        <span class="cat-label">EDITORIAL</span>
                         <h3>Vinhos do Dia a Dia</h3>
-                        <p>
-                            <!-- ADMIN: descrição -->
-                            Equilíbrio e versatilidade para refeições e momentos simples.
-                        </p>
-                        <button class="btn btn-outline-gold">
-                            <a href="#">Ver Seleção</a>
-                        </button>
-                    </div>
+                        <p>Equilíbrio e versatilidade para refeições e momentos simples.</p>
+                        <span class="cat-cta">Ver Seleção →</span>
+                    </a>
                 </div>
 
-                <!-- CATEGORIA 2 -->
                 <div class="col-md-4">
-                    <div class="category-card">
+                    <a href="#reservas" class="category-card-premium">
+                        <span class="cat-label">SELEÇÃO</span>
                         <h3>Reservas & Colheitas</h3>
-                        <p>
-                            <!-- ADMIN: descrição -->
-                            Vinhos de estrutura, profundidade e capacidade de evolução.
-                        </p>
-                        <button class="btn btn-outline-gold">
-                            <a href="#">Descobrir Reservas</a>
-                        </button>
-
-                    </div>
+                        <p>Vinhos de estrutura, profundidade e capacidade de evolução.</p>
+                        <span class="cat-cta">Descobrir Reservas →</span>
+                    </a>
                 </div>
 
-                <!-- CATEGORIA PREMIUM -->
                 <div class="col-md-4">
-                    <div class="category-card">
+                    <a href="#premium" class="category-card-premium gold-focus">
+                        <span class="cat-label">ALTA CURADORIA</span>
                         <h3>Seleção Premium</h3>
-                        <p>
-                            <!-- ADMIN: descrição -->
-                            Rótulos de excelência e edições limitadas.
-                        </p>
-
-                        <button class="btn btn-outline-gold">
-                            <a href="#">Explorar Premium</a>
-                        </button>
-                    </div>
+                        <p>Rótulos de excelência, edições limitadas e referências raras.</p>
+                        <span class="cat-cta">Explorar Premium →</span>
+                    </a>
                 </div>
 
             </div>
         </div>
     </section>
+
 
     <!-- ======================================================
      PRODUCT GRID (HOME)
@@ -157,112 +151,122 @@
      - produtos vêm da base de dados
      - loop automático
      ====================================================== -->
-    <section class="section bg-dark-soft">
+    <section class="section-dark section-products" id="vinhos">
         <div class="container">
-
-            <div class="row mb-5">
-                <div class="col text-center">
-                    <h2>A Nossa Seleção</h2>
-                    <p class="opacity-75">
-                        <!-- ADMIN: texto introdutório -->
-                        Vinhos escolhidos pelo carácter, origem e autenticidade.
-                    </p>
-                </div>
+            <div class="text-center mb-5">
+                <h2 class="section-title">A Nossa Seleção</h2>
+                <p class="section-subtitle">Vinhos escolhidos pelo caráter, origem e autenticidade.</p>
             </div>
 
             <div class="row g-4">
 
-                <!-- ===============================
-           PRODUTO (EXEMPLO)
-           ADMIN FUTURO:
-           este bloco será repetido automaticamente
-           =============================== -->
-                <div class="col-md-6 col-lg-4">
+                <!-- PRODUTO 1 -->
+                <div class="col-sm-6 col-lg-4">
                     <div class="product-card">
-
-                        <!-- IMAGEM DO PRODUTO -->
-                        <img src="assets/img/img1.png" alt="Produto">
-
-                        <div class="product-info">
-                            <h5>
-                                <!-- ADMIN: nome do produto -->
-                                Martino Superiore Petit Verdot
-                            </h5>
-
-                            <p class="product-region">
-                                <!-- ADMIN: região -->
-                                Argentina · Mendoza
-                            </p>
-
-                            <span class="price">
-                                <!-- ADMIN: preço -->
-                                29,90 €
-                            </span>
-
-                            <a href="product.html" class="btn btn-outline-gold mt-3">
-                                Ver Produto
-                            </a>
+                        <div class="product-media">
+                            <span class="product-tag-premium">Premium</span>
+                            <!-- ADMIN: trocar imagem -->
+                            <img src="./assets/img/img_teste1.png" alt="Vinho" loading="lazy">
+                            <a href="#" class="product-quick">Ver Produto</a>
+                        </div>
+                        <div class="product-body">
+                            <h4>Martino Superiore Petit Verdot</h4>
+                            <p class="product-meta">Argentina · Mendoza</p>
+                            <p class="product-price">29,90 €</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- DUPLICAR PRODUTOS AQUI -->
-                <div class="col-md-6 col-lg-4">
+                <!-- PRODUTO 2 -->
+                <div class="col-sm-6 col-lg-4">
                     <div class="product-card">
-
-                        <!-- IMAGEM DO PRODUTO -->
-                        <img src="assets/img/img1.png" alt="Produto">
-
-                        <div class="product-info">
-                            <h5>
-                                <!-- ADMIN: nome do produto -->
-                                Martino Superiore Petit Verdot
-                            </h5>
-
-                            <p class="product-region">
-                                <!-- ADMIN: região -->
-                                Argentina · Mendoza
-                            </p>
-
-                            <span class="price">
-                                <!-- ADMIN: preço -->
-                                29,90 €
-                            </span>
-
-                            <a href="product.html" class="btn btn-outline-gold mt-3">
-                                Ver Produto
-                            </a>
+                        <div class="product-media">
+                            <span class="product-tag-reserva">Dia-a-Dia</span>
+                            <!-- ADMIN: trocar imagem -->
+                            <img src="./assets/img/img_teste2.png" alt="Vinho" loading="lazy">
+                            <a href="#" class="product-quick">Ver Produto</a>
+                        </div>
+                        <div class="product-body">
+                            <h4>Martino Superiore Petit Verdot</h4>
+                            <p class="product-meta">Argentina · Mendoza</p>
+                            <p class="product-price">29,90 €</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <!-- PRODUTO 3 -->
+                <div class="col-sm-6 col-lg-4">
                     <div class="product-card">
-
-                        <!-- IMAGEM DO PRODUTO -->
-                        <img src="assets/img/img1.png" alt="Produto">
-
-                        <div class="product-info">
-                            <h5>
-                                <!-- ADMIN: nome do produto -->
-                                Martino Superiore Petit Verdot
-                            </h5>
-
-                            <p class="product-region">
-                                <!-- ADMIN: região -->
-                                Argentina · Mendoza
-                            </p>
-
-                            <span class="price">
-                                <!-- ADMIN: preço -->
-                                29,90 €
-                            </span>
-
-                            <a href="product.html" class="btn btn-outline-gold mt-3">
-                                Ver Produto
-                            </a>
+                        <div class="product-media">
+                            <span class="product-tag-dia_a_dia">Reservas</span>
+                            <!-- ADMIN: trocar imagem -->
+                            <img src="./assets/img/img_teste3.png" alt="Vinho" loading="lazy">
+                            <a href="#" class="product-quick">Ver Produto</a>
+                        </div>
+                        <div class="product-body">
+                            <h4>Martino Superiore Petit Verdot</h4>
+                            <p class="product-meta">Argentina · Mendoza</p>
+                            <p class="product-price">29,90 €</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- PRODUTO 4 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-tag-premium">Premium</span>
+                            <!-- ADMIN: trocar imagem -->
+                            <img src="./assets/img/img_teste4.png" alt="Vinho" loading="lazy">
+                            <a href="#" class="product-quick">Ver Produto</a>
+                        </div>
+                        <div class="product-body">
+                            <h4>Martino Superiore Petit Verdot</h4>
+                            <p class="product-meta">Argentina · Mendoza</p>
+                            <p class="product-price">29,90 €</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUTO 5 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-tag-premium">Premium</span>
+                            <!-- ADMIN: trocar imagem -->
+                            <img src="./assets/img/img_teste3.png" alt="Vinho" loading="lazy">
+                            <a href="#" class="product-quick">Ver Produto</a>
+                        </div>
+                        <div class="product-body">
+                            <h4>Martino Superiore Petit Verdot</h4>
+                            <p class="product-meta">Argentina · Mendoza</p>
+                            <p class="product-price">29,90 €</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUTO 6 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-tag-premium">Premium</span>
+                            <!-- ADMIN: trocar imagem -->
+                            <img src="./assets/img/img_teste4.png" alt="Vinho" loading="lazy">
+                            <a href="#" class="product-quick">Ver Produto</a>
+                        </div>
+                        <div class="product-body">
+                            <h4>Martino Superiore Petit Verdot</h4>
+                            <p class="product-meta">Argentina · Mendoza</p>
+                            <p class="product-price">29,90 €</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
             </div>
         </div>
     </section>
@@ -273,34 +277,39 @@
      - imagem
      - texto
      ====================================================== -->
-    <section class="section">
+    <section class="section-dark section-premium" id="premium">
         <div class="container">
-            <div class="row align-items-center g-5">
+            <div class="row align-items-center g-4">
 
-                <div class="col-lg-6">
-                    <h2>Seleção Premium</h2>
-                    <p class="mt-3">
-                        <!-- ADMIN: texto -->
-                        Uma curadoria exclusiva de vinhos de gama alta, escolhidos pela sua
-                        complexidade, autenticidade e carácter distintivo.
+                <div class="col-lg-5">
+                    <p class="hero-kicker">Edições Limitadas</p>
+                    <h2 class="section-title text-start">Seleção Premium</h2>
+                    <p class="section-subtitle text-start">
+                        Uma curadoria exclusiva de vinhos de gama alta, escolhidos pela sua complexidade,
+                        autenticidade e caráter distintivo.
                     </p>
 
-                    <a href="#" class="btn btn-outline-gold mt-3">
-                        Descobrir Seleção
-                    </a>
+                    <a href="#" class="btn btn-gold-cta mt-2">Descobrir Seleção</a>
+
+                    <div class="premium-perks mt-4">
+                        <div>🍷 Reservas</div>
+                        <div>🏅 Premiados</div>
+                        <div>🕯️ Envelhecidos</div>
+                    </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <!-- ADMIN: vídeo editorial -->
-                    <video src="./assets/img/Projeto_video.mp4" class="w-100 h-100 object-fit-cover" autoplay muted loop
-                        playsinline preload="metadata"></video>
-
+                <div class="col-lg-7">
+                    <div class="video-frame">
+                        <video src="./assets/img/Projeto_video.mp4" autoplay muted loop playsinline preload="metadata"
+                            poster="./assets/img/video-poster.jpg"></video>
+                        <div class="video-overlay"></div>
+                    </div>
                 </div>
-
 
             </div>
         </div>
     </section>
+
 
     <!-- ======================================================
      FOOTER
