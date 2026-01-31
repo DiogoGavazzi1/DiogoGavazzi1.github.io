@@ -209,42 +209,23 @@
                 </div>
 
                 <!-- ==========================
-             RESUMO ENCOMENDA
-             ========================== -->
+     RESUMO ENCOMENDA
+     ========================== -->
                 <div class="col-lg-5">
                     <aside class="order-summary">
 
                         <h3 class="checkout-card-title">Resumo da Encomenda</h3>
 
-                        <!-- ADMIN FUTURO:
-                 aqui vamos renderizar os produtos via JS -->
+                        <!-- Produtos vêm dinamicamente do carrinho -->
                         <div class="order-items">
-
-                            <div class="order-item">
-                                <img src="assets/img/img1.png" alt="Vinho" />
-                                <div class="order-item-info">
-                                    <p class="order-item-name">Martino Superiore Petit Verdot</p>
-                                    <p class="order-item-meta">Premium · x1</p>
-                                </div>
-                                <p class="order-item-price">29,90 €</p>
-                            </div>
-
-                            <div class="order-item">
-                                <img src="assets/img/img_teste2.png" alt="Vinho" />
-                                <div class="order-item-info">
-                                    <p class="order-item-name">Alentejo Tinto Clássico</p>
-                                    <p class="order-item-meta">Dia-a-dia · x2</p>
-                                </div>
-                                <p class="order-item-price">19,80 €</p>
-                            </div>
-
+                            <!-- JS vai inserir os produtos aqui -->
                         </div>
 
                         <div class="summary-divider"></div>
 
                         <div class="summary-row">
                             <span>Subtotal</span>
-                            <span>49,70 €</span>
+                            <span id="checkout-subtotal">0,00 €</span>
                         </div>
 
                         <div class="summary-row">
@@ -254,11 +235,13 @@
 
                         <div class="summary-row total">
                             <span>Total</span>
-                            <span>49,70 €</span>
+                            <span id="checkout-total">0,00 €</span>
                         </div>
+
 
                     </aside>
                 </div>
+
 
             </div>
         </div>
@@ -269,6 +252,9 @@
 
     <!-- Carrinho -->
     <script src="assets/js/cart.js"></script>
+    <script src="assets/js/checkout.js"></script>
+
+
 </body>
 
 </html>
