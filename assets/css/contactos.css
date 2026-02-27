@@ -1,0 +1,88 @@
+/* ===============================
+   CONTACT PAGE
+================================= */
+
+.contact-section {
+    min-height: 100vh;
+    padding: 160px 0 120px 0;
+    background: radial-gradient(circle at 15% 20%, #141414 0%, #0b0b0c 60%);
+}
+
+/* LEFT SIDE */
+.contact-kicker {
+    display: inline-block;
+    letter-spacing: .3em;
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: var(--gold2);
+    margin-bottom: 15px;
+}
+
+.contact-title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    color: rgba(255,255,255,.65);
+    margin-bottom: 30px;
+    max-width: 420px;
+}
+
+.contact-details p {
+    color: rgba(255,255,255,.55);
+    margin-bottom: 6px;
+}
+
+/* RIGHT SIDE CARD */
+.contact-card {
+    background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.7));
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 22px;
+    padding: 50px 45px;
+    box-shadow: 0 60px 140px rgba(0,0,0,.65);
+}
+
+.form-title {
+    margin-bottom: 35px;
+    font-size: 1.6rem;
+}
+
+/* FORM */
+.form-premium {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    border-radius: 0;
+    color: #fff;
+}
+
+.form-premium:focus {
+    box-shadow: none;
+    border-color: var(--gold2);
+    background: transparent;
+    color: #fff;
+}
+
+.form-premium::placeholder {
+    color: rgba(255,255,255,.4);
+}
+
+
+/* ===============================
+   FULL WIDTH MAP
+================================= */
+
+.map-full {
+    width: 100vw;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+}
+
+.map-full iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
