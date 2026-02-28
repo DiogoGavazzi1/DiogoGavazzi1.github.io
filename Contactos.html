@@ -19,35 +19,48 @@
 
 <body>
 
-<!-- ======================================================
- NAVBAR
-====================================================== -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-premium">
-    <div class="container">
-        <a class="navbar-brand brand-mark" href="index.html">
-            <span class="brand-dot"></span> WINE STORE
-        </a>
+ <!-- ======================================================
+     NAVBAR
+     No futuro: links dinâmicos vindos do admin
+     ====================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-premium">
+        <div class="container">
+            <a class="navbar-brand brand-mark" href="index.html">
+                <span class="brand-dot"></span> WINE STORE
+            </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navMain">
-            <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
-                <li class="nav-item"><a class="nav-link nav-link-premium" href="#">Vinhos</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-premium" href="#">Reservas</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-premium" href="#">Premium</a></li>
-                <li class="nav-item"><a class="nav-link nav-link-premium active" href="#">Contacto</a></li>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Vinhos
+                        </a>
+                        <ul class="dropdown-menu dropdown-color rounded-bottom" >
+                            <li><a class="dropdown-item dropdown-category text-light" href="#">Dia a dia</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item dropdown-category text-light" href="#">Reservas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item dropdown-category text-light" href="#">Premium</a></li>
+                        </ul>
+                    </li>
+                       <li class="nav-item"><a class="nav-link nav-link-premium" href="SobreNos.html">Sobre Nos</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-premium" href="Contactos.html">Contactos</a></li>
 
-                <li class="nav-item ms-lg-3">
-                    <a class="nav-link cart-link" href="cart.html">
-                        Carrinho <span class="cart-badge">(0)</span>
-                    </a>
-                </li>
-            </ul>
+                    <!-- CARRINHO -->
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link cart-link" href="cart.html">
+                            Carrinho <span class="cart-badge" id="cart-count">(0)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
 
 
 <!-- CONTACT SECTION -->
@@ -75,38 +88,27 @@
                 </div>
             </div>
 
-            <!-- RIGHT SIDE -->
-            <div class="col-lg-7">
-                <div class="contact-card">
-                    <h2 class="form-title">Contact Form</h2>
-
-                    <form>
-                        <div class="mb-4">
-                            <input type="text" class="form-control form-premium" placeholder="Your Name">
-                        </div>
-
-                        <div class="mb-4">
-                            <input type="email" class="form-control form-premium" placeholder="Your Email">
-                        </div>
-
-                        <div class="mb-4">
-                            <input type="text" class="form-control form-premium" placeholder="Your Phone">
-                        </div>
-
-                        <div class="mb-4">
-                            <textarea class="form-control form-premium" rows="4" placeholder="Message"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-catalog-cta w-100">
-                            Enviar Mensagem →
-                        </button>
-                    </form>
-                </div>
+        <form action="enviar.php" method="POST">
+            <div class="mb-4">
+                <input type="text" name="nome" class="form-control form-premium" placeholder="Your Name" required>
             </div>
 
-        </div>
-    </div>
-</section> 
+            <div class="mb-4">
+                <input type="email" name="email" class="form-control form-premium" placeholder="Your Email" required>
+            </div>
+
+            <div class="mb-4">
+                <input type="text" name="telefone" class="form-control form-premium" placeholder="Your Phone">
+            </div>
+
+            <div class="mb-4">
+                <textarea name="mensagem" class="form-control form-premium" rows="4" placeholder="Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-catalog-cta w-100">
+                Enviar Mensagem →
+            </button>
+        </form>
 
 <!-- *********************************
         LOCALIZACAO DA LOJA NO MAPS 

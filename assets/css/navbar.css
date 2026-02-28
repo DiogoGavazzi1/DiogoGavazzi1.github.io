@@ -48,3 +48,13 @@
 .nav-link-premium:hover::after {
     width: 100%
 }
+
+
+.dropdown-color{
+    background-color: #1f1f1f;
+}
+
+.dropdown-category:hover{
+    background-color: var(--gold);
+
+}

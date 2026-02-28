@@ -31,7 +31,7 @@
 
 <body>
 
-    <!-- ======================================================
+     <!-- ======================================================
      NAVBAR
      No futuro: links dinâmicos vindos do admin
      ====================================================== -->
@@ -47,10 +47,20 @@
 
             <div class="collapse navbar-collapse" id="navMain">
                 <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link nav-link-premium" href="#vinhos">Vinhos</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-premium" href="#reservas">Reservas</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-premium" href="#premium">Premium</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-premium" href="#contacto">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Vinhos
+                        </a>
+                        <ul class="dropdown-menu dropdown-color rounded-bottom" >
+                            <li><a class="dropdown-item dropdown-category text-light" href="#">Dia a dia</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item dropdown-category text-light" href="#">Reservas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item dropdown-category text-light" href="#">Premium</a></li>
+                        </ul>
+                    </li>
+                       <li class="nav-item"><a class="nav-link nav-link-premium" href="SobreNos.html">Sobre Nos</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-premium" href="Contactos.html">Contactos</a></li>
 
                     <!-- CARRINHO -->
                     <li class="nav-item ms-lg-3">
