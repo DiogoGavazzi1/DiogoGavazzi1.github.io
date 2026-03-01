@@ -19,58 +19,105 @@
 <body>
 
     <!-- ======================================================
-     NAVBAR
-     No futuro: links dinâmicos vindos do admin
-     ====================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-premium">
-        <div class="container">
-            <a class="navbar-brand brand-mark" href="index.html">
-                <span class="brand-dot"></span> WINE STORE
-            </a>
+     NAVBAR LUXURY
+====================================================== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-premium">
+    <div class="container">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- LOGO -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/LOGO LOJA.png" class="Logotipo" alt="Wine Store Logo">
+        </a>
 
-            <div class="collapse navbar-collapse" id="navMain">
-                <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Vinhos
-                        </a>
-                        <ul class="dropdown-menu dropdown-color rounded-bottom" >
-                            <li><a class="dropdown-item dropdown-category text-light" href="#">Dia a dia</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item dropdown-category text-light" href="#">Reservas</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item dropdown-category text-light" href="#">Premium</a></li>
-                        </ul>
-                    </li>
-                       <li class="nav-item"><a class="nav-link nav-link-premium" href="SobreNos.html">Sobre Nos</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-premium" href="Contactos.html">Contactos</a></li>
+        <!-- MOBILE TOGGLER -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMain"
+                aria-controls="navMain"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <!-- CARRINHO -->
-                    <li class="nav-item ms-lg-3">
-                        <a class="nav-link cart-link" href="cart.html">
-                            Carrinho <span class="cart-badge" id="cart-count">(0)</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <!-- NAV LINKS -->
+        <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
+
+                <!-- VINHOS DROPDOWN -->
+                <li class="nav-item dropdown position-relative">
+
+                    <a class="nav-link nav-link-premium dropdown-toggle"
+                       href="#"
+                       id="vinhosDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Vinhos
+                    </a>
+
+                    <ul class="dropdown-menu luxury-dropdown"
+                        aria-labelledby="vinhosDropdown">
+
+                        <li class="dropdown-item-lux active">Todas</li>
+                        <li class="dropdown-item-lux">Dia-a-dia</li>
+                        <li class="dropdown-item-lux">Reservas</li>
+                        <li class="dropdown-item-lux">Premium</li>
+
+                        <li class="lux-divider"></li>
+
+                        <li class="dropdown-item-lux">Portos</li>
+                        <li class="dropdown-item-lux">Espumantes</li>
+                        <li class="dropdown-item-lux">Champanhes</li>
+                        <li class="dropdown-item-lux">Destilados</li>
+                        <li class="dropdown-item-lux">Bag in box</li>
+
+                    </ul>
+
+                </li>
+
+                <!-- SOBRE NÓS -->
+                <li class="nav-item">
+                    <a class="nav-link nav-link-premium" href="SobreNos.html">
+                        Sobre Nós
+                    </a>
+                </li>
+
+                <!-- CONTACTOS -->
+                <li class="nav-item">
+                    <a class="nav-link nav-link-premium" href="Contactos.html">
+                        Contactos
+                    </a>
+                </li>
+
+                <!-- CARRINHO -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link cart-link" href="cart.html">
+                        Carrinho
+                        <span>[</span>
+                        <span class="cart-badge" id="cart-count">0</span>
+                        <span>]</span>
+                    </a>
+                </li>
+
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
     
 <!-- HERO -->
 <section class="about-hero">
     <img src="assets/img/hero-cover2.jpg" alt="Wine background">
 
     <div class="container about-hero-content">
-        <div class="gold-text mb-3">A Nossa História</div>
-        <h1 class="display-4 fw-bold">Paixão Pelo Vinho.<br>Excelência em Cada Garrafa.</h1>
-        <p class="lead mt-3 text-light opacity-75">
-            Trabalhamos com produtores selecionados para oferecer vinhos exclusivos,
-            reservas especiais e rótulos premium.
-        </p>
+     <div class="gold-text mb-3">Bem-vindo à FreeMotiv</div>
+<h1 class="display-4 fw-bold">
+    Descubra Vinhos Que Marcam Momentos.
+</h1>
+<p class="lead mt-3 text-light opacity-75">
+    Dos clássicos do dia a dia às reservas especiais,
+    ajudamos-o a encontrar o vinho perfeito para cada ocasião.
+</p>
     </div>
 </section>
 
@@ -87,20 +134,34 @@
         </div>
 
             <div class="col-lg-6">
-                <div class="gold-text mb-3">WineStore</div>
-                <h2 class="fw-bold mb-4">Selecionamos Apenas Vinhos de Excelência</h2>
+                    <div class="gold-text mb-3">Quem Somos?</div>
 
-                <p class="text-light opacity-75">
-                    A WineStore nasceu com o objetivo de oferecer uma curadoria
-                    exclusiva de vinhos nacionais e internacionais.
-                </p>
+                    <h2 class="fw-bold mb-4">
+                        Uma casa familiar onde cada garrafa conta uma história.
+                    </h2>
 
-                <p class="text-light opacity-75">
-                    Cada garrafa é escolhida com rigor, tradição e atenção ao detalhe,
-                    garantindo qualidade superior e experiências memoráveis.
-                </p>
+                    <p class="text-light opacity-75">
+                        Desde 2017, selecionamos vinhos com carácter, qualidade e autenticidade.
+                        Trabalhamos com produtores que valorizam tradição, detalhe e excelência.
+                    </p>
 
-                <a href="#" class="btn btn-outline-gold mt-3">Explorar Coleção</a>
+                    <p class="text-light opacity-75">
+                        Seja para um jantar especial, uma celebração ou simplesmente para
+                        apreciar um bom copo ao final do dia, estamos aqui para aconselhar
+                        e surpreender.
+                    </p>
+
+                    <br><br>
+
+                    <div class="gold-text mb-3">O que nos diferencia</div>
+                    <p class="text-light opacity-75">
+                        ✔ Atendimento próximo e personalizado  <br>
+                        ✔ Seleção cuidada de rótulos nacionais e internacionais  <br>
+                        ✔ Qualidade acessível sem comprometer a excelência  <br>
+                        ✔ Paixão genuína pelo vinho  <br>
+                    </p>
+
+                    
             </div>
 
         </div>
@@ -115,14 +176,14 @@
 
             <div class="col-md-3">
                 <div class="stat-box">
-                    <div class="stat-number">25+</div>
+                    <div class="stat-number">10</div>
                     <p class="mt-2 opacity-75">Anos de Experiência</p>
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="stat-box">
-                    <div class="stat-number">1.500+</div>
+                    <div class="stat-number">1.200+</div>
                     <p class="mt-2 opacity-75">Clientes Satisfeitos</p>
                 </div>
             </div>
@@ -158,5 +219,9 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Carrinho (LocalStorage) -->
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/checkout.js"></script>
 </body>
 </html>

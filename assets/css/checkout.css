@@ -160,6 +160,52 @@
     margin: 0;
 }
 
+/* ===============================
+   PAYMENT GRID
+================================= */
+
+.payment-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.pay-option {
+    cursor: pointer;
+}
+
+.pay-option input {
+    display: none;
+}
+
+.pay-box {
+    display: block;
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,.08);
+    background: rgba(255,255,255,.02);
+    transition: .3s ease;
+}
+
+.pay-option input:checked + .pay-box {
+    border-color: #d6b66a;
+    background: rgba(214,182,106,.08);
+}
+
+.pay-title {
+    display: block;
+    font-weight: 500;
+}
+
+.pay-sub {
+    font-size: .85rem;
+    opacity: .6;
+}
+
+.total-color
+{
+    color:#d6b66a;
+}
+
 @media(max-width: 992px) {
     .order-summary {
         position: static;

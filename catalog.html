@@ -28,48 +28,92 @@
 
 <body>
 
-     <!-- ======================================================
-     NAVBAR
-     No futuro: links dinâmicos vindos do admin
-     ====================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-premium">
-        <div class="container">
-            <a class="navbar-brand brand-mark" href="index.html">
-                <span class="brand-dot"></span> WINE STORE
-            </a>
+  <!-- ======================================================
+     NAVBAR LUXURY
+====================================================== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-premium">
+    <div class="container">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- LOGO -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/LOGO LOJA.png" class="Logotipo" alt="Wine Store Logo">
+        </a>
 
-            <div class="collapse navbar-collapse" id="navMain">
-                <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Vinhos
-                        </a>
-                        <ul class="dropdown-menu dropdown-color rounded-bottom" >
-                            <li><a class="dropdown-item dropdown-category text-light" href="#">Dia a dia</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item dropdown-category text-light" href="#">Reservas</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item dropdown-category text-light" href="#">Premium</a></li>
-                        </ul>
-                    </li>
-                       <li class="nav-item"><a class="nav-link nav-link-premium" href="SobreNos.html">Sobre Nos</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-premium" href="Contactos.html">Contactos</a></li>
+        <!-- MOBILE TOGGLER -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMain"
+                aria-controls="navMain"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <!-- CARRINHO -->
-                    <li class="nav-item ms-lg-3">
-                        <a class="nav-link cart-link" href="cart.html">
-                            Carrinho <span class="cart-badge" id="cart-count">(0)</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <!-- NAV LINKS -->
+        <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
+
+                <!-- VINHOS DROPDOWN -->
+                <li class="nav-item dropdown position-relative">
+
+                    <a class="nav-link nav-link-premium dropdown-toggle"
+                       href="#"
+                       id="vinhosDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Vinhos
+                    </a>
+
+                    <ul class="dropdown-menu luxury-dropdown"
+                        aria-labelledby="vinhosDropdown">
+
+                        <li class="dropdown-item-lux active">Todas</li>
+                        <li class="dropdown-item-lux">Dia-a-dia</li>
+                        <li class="dropdown-item-lux">Reservas</li>
+                        <li class="dropdown-item-lux">Premium</li>
+
+                        <li class="lux-divider"></li>
+
+                        <li class="dropdown-item-lux">Portos</li>
+                        <li class="dropdown-item-lux">Espumantes</li>
+                        <li class="dropdown-item-lux">Champanhes</li>
+                        <li class="dropdown-item-lux">Destilados</li>
+                        <li class="dropdown-item-lux">Bag in box</li>
+
+                    </ul>
+
+                </li>
+
+                <!-- SOBRE NÓS -->
+                <li class="nav-item">
+                    <a class="nav-link nav-link-premium" href="SobreNos.html">
+                        Sobre Nós
+                    </a>
+                </li>
+
+                <!-- CONTACTOS -->
+                <li class="nav-item">
+                    <a class="nav-link nav-link-premium" href="Contactos.html">
+                        Contactos
+                    </a>
+                </li>
+
+                <!-- CARRINHO -->
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link cart-link" href="cart.html">
+                        Carrinho
+                        <span>[</span>
+                        <span class="cart-badge" id="cart-count">0</span>
+                        <span>]</span>
+                    </a>
+                </li>
+
+            </ul>
         </div>
-    </nav>
-
+    </div>
+</nav>
 
     <!-- ==================================================
        HEADER / BANNER DO CATÁLOGO
@@ -113,6 +157,12 @@
                             <option value="dia-a-dia">Dia-a-dia</option>
                             <option value="reservas">Reservas</option>
                             <option value="premium">Premium</option>
+                            <option value="dropdown-divider">------------</option>
+                            <option value="">Portos</option>
+                            <option value="">Espumantes</option>
+                            <option value="">Champanhes</option>
+                            <option value="">Destilados</option>
+                            <option value="">Bag in box</option>
                         </select>
                     </div>
 
@@ -124,6 +174,7 @@
                             <option>Preço: baixo → alto</option>
                             <option>Preço: alto → baixo</option>
                             <option>Novidades</option>
+                            <option>Ordem Alfabética</option>
                         </select>
                     </div>
 
@@ -159,7 +210,7 @@
                                     price: 29.90,
                                     image: 'assets/img/img1.png',
                                     meta: 'Mendoza · Argentina',
-                                    tag: 'Premium'
+                                    tag: 'Portos'
                                 })">
                                 Adicionar ao Carrinho
                             </button>
@@ -229,7 +280,7 @@
                 <div class="col-sm-6 col-lg-4" id="premium">
                     <div class="product-card">
                         <div class="product-media">
-                            <span class="tag tag-premium">Premium</span>
+                            <span class="tag tag-Portos">Premium</span>
 
                             <img src="assets/img/img_teste3.png" alt="Barolo Riserva Elegance" loading="lazy">
                             <a href="product.html" class="product-quick">Ver Produto</a>
@@ -258,7 +309,7 @@
                 <div class="col-sm-6 col-lg-4">
                     <div class="product-card">
                         <div class="product-media">
-                            <span class="tag tag-reservas">Reservas</span>
+                            <span class="tag tag-espumantes">Reservas</span>
 
                             <img src="assets/img/img_teste4.png" alt="Colheita Especial 2018" loading="lazy">
                             <a href="product.html" class="product-quick">Ver Produto</a>
@@ -287,7 +338,66 @@
                 <div class="col-sm-6 col-lg-4">
                     <div class="product-card">
                         <div class="product-media">
-                            <span class="tag tag-diaadia">Dia-a-dia</span>
+                            <span class="tag tag-champanhes">Dia-a-dia</span>
+
+                            <img src="assets/img/img_teste6.png" alt="Vinho Verde Fresco" loading="lazy">
+                            <a href="product.html" class="product-quick">Ver Produto</a>
+                        </div>
+
+                        <div class="product-body">
+                            <h4>Vinho Verde Fresco</h4>
+                            <p class="product-meta">Minho · Portugal</p>
+                            <p class="product-price">7,90 €</p>
+
+                            <button class="btn btn-outline-gold w-100 mt-2" onclick="addToCart({
+                                    id: 6,
+                                    name: 'Vinho Verde Fresco',
+                                    price: 7.90,
+                                    image: 'assets/img/img_teste6.png',
+                                    meta: 'Minho · Portugal',
+                                    tag: 'Dia-a-dia'
+                                })">
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUTO 7-->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="tag tag-destilados">Dia-a-dia</span>
+
+                            <img src="assets/img/img_teste6.png" alt="Vinho Verde Fresco" loading="lazy">
+                            <a href="product.html" class="product-quick">Ver Produto</a>
+                        </div>
+
+                        <div class="product-body">
+                            <h4>Vinho Verde Fresco</h4>
+                            <p class="product-meta">Minho · Portugal</p>
+                            <p class="product-price">7,90 €</p>
+
+                            <button class="btn btn-outline-gold w-100 mt-2" onclick="addToCart({
+                                    id: 6,
+                                    name: 'Vinho Verde Fresco',
+                                    price: 7.90,
+                                    image: 'assets/img/img_teste6.png',
+                                    meta: 'Minho · Portugal',
+                                    tag: 'Dia-a-dia'
+                                })">
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PRODUTO 8 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="tag tag-bag-in-box">Dia-a-dia</span>
 
                             <img src="assets/img/img_teste6.png" alt="Vinho Verde Fresco" loading="lazy">
                             <a href="product.html" class="product-quick">Ver Produto</a>
@@ -357,8 +467,9 @@
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Carrinho -->
+   <!-- Carrinho (LocalStorage) -->
     <script src="assets/js/cart.js"></script>
+    <script src="assets/js/checkout.js"></script>
 </body>
 
 </html>

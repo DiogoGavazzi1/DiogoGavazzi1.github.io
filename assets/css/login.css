@@ -1,0 +1,36 @@
+/* ===============================
+   LOGIN PAGE
+================================= */
+
+.login-section {
+    min-height: 100vh;
+    padding: 140px 0 100px 0;
+    background: radial-gradient(circle at 20% 20%, #141414 0%, #0b0b0c 60%);
+}
+
+.login-card {
+    background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.7));
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 22px;
+    padding: 50px 40px;
+    box-shadow: 0 60px 140px rgba(0,0,0,.65);
+}
+
+.form-premium {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    border-radius: 0;
+    color: #fff;
+}
+
+.form-premium:focus {
+    box-shadow: none;
+    border-color: var(--gold2);
+    background: transparent;
+    color: #fff;
+}
+
+.form-premium::placeholder {
+    color: rgba(255,255,255,.4);
+}

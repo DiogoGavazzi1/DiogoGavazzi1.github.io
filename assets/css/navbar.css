@@ -1,60 +1,86 @@
-/* NAVBAR premium */
+/* ========================================
+   NAVBAR BASE
+======================================== */
+
 .nav-premium {
-    background: rgba(10, 10, 10, .45);
+    background: rgba(10,10,10,.85);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255, 255, 255, .06);
-    padding: 14px 0;
-}
-
-.brand-mark {
-    letter-spacing: .35em;
-    font-size: .9rem;
-    text-transform: uppercase;
-    opacity: .95;
-}
-
-.brand-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 99px;
-    background: var(--gold);
-    margin-right: 10px;
-    box-shadow: 0 0 18px rgba(199, 161, 74, .5);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,.05);
 }
 
 .nav-link-premium {
-    position: relative;
-    font-size: .95rem;
-    opacity: .9;
-}
-
-.nav-link-premium::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-    transition: .25s;
+    color: rgba(255,255,255,.75);
+    transition: .25s ease;
 }
 
 .nav-link-premium:hover {
-    opacity: 1;
-    color: #fff
+    color: var(--gold2);
 }
 
-.nav-link-premium:hover::after {
-    width: 100%
+.Logotipo {
+    height: 42px;
 }
 
 
-.dropdown-color{
-    background-color: #1f1f1f;
+/* ========================================
+   LUXURY DROPDOWN
+======================================== */
+
+.luxury-dropdown {
+    min-width: 240px;
+    padding: 18px 0;
+    border-radius: 18px;
+
+    background: rgba(18, 18, 18, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 30px 80px rgba(0,0,0,.6);
+
+    margin-top: 14px;
 }
 
-.dropdown-category:hover{
-    background-color: var(--gold);
-
+.dropdown-item-lux {
+    padding: 10px 22px;
+    color: rgba(255,255,255,.75);
+    font-weight: 400;
+    cursor: pointer;
+    transition: .25s ease;
 }
+
+.dropdown-item-lux:hover {
+    color: var(--gold2);
+    background: rgba(214,182,106,.08);
+}
+
+.dropdown-item-lux.active {
+    color: #fff;
+    font-weight: 500;
+}
+
+.lux-divider {
+    height: 1px;
+    margin: 12px 18px;
+    background: rgba(255,255,255,.08);
+}
+
+
+/* ========================================
+   CARRINHO
+======================================== */
+
+.cart-link {
+    color: rgba(255,255,255,.8);
+}
+
+.cart-badge {
+    color: var(--gold2);
+    font-weight: 500;
+}
+.Logotipo{
+    height: 80px;
+    width: auto;
+}
+

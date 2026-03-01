@@ -18,6 +18,8 @@
 
     --stroke: rgba(199, 161, 74, .25);
     --border: rgba(255, 255, 255, .08);
+
+    --portos: #3b77e7;
 }
 
 /* ===============================
@@ -140,6 +142,34 @@ a {
     border: 1px solid #6F7682;
 }
 
+.tag-Portos
+{
+    color: var(--portos);
+     border: 1px solid #3b77e7;
+}
+
+.tag-espumantes
+{
+    color: #e0e852;
+    border: 1px solid #e0e852;
+}
+
+
+.tag-champanhes{
+    color: #04dc00;
+    border: 1px solid #04dc00;
+}
+
+.tag-destilados
+{
+    color: #8865b8;
+    border: 1px solid #8865b8;
+}
+
+.tag-bag-in-box{
+    color: #65a1b8;
+    border: 1px solid #65a1b8;
+}
 /* ===============================
    PRODUCT CARDS
 ================================ */

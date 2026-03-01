@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST["telefone"];
     $mensagem = $_POST["mensagem"];
 
-    $para = "teuemail@gmail.com"; // 🔴 MUDA PARA O TEU EMAIL
+    $para = "cashfreemotiv@gmail.com"; // 🔴 MUDA PARA O TEU EMAIL
     $assunto = "Nova mensagem do site";
 
     $corpo = "Nome: $nome\n";
