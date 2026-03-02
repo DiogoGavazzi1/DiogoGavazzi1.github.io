@@ -364,6 +364,12 @@ a {
    MOBILE
 ================================ */
 @media(max-width:768px) {
+
+    .hero-premium
+    {
+        margin-top: 50px;
+    }
+
     .product-media img {
         height: 220px;
     }

@@ -2,6 +2,7 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contactos | WineStore</title>
 
     <!-- Bootstrap 5 -->
@@ -109,7 +110,7 @@
 
 <!-- CONTACT SECTION -->
 <section class="contact-section">
-    <div class="container">
+    <div class="container-fluid px-4 px-md-5">
         <div class="row align-items-center g-5">
 
             <!-- LEFT SIDE -->
@@ -132,28 +133,51 @@
                 </div>
             </div>
 
-        <form action="enviar.php" method="POST">
-            <div class="mb-4">
-                <input type="text" name="nome" class="form-control form-premium" placeholder="Your Name" required>
+            <!-- RIGHT SIDE (FORM) -->
+            <div class="col-lg-6 offset-lg-1">
+                <div class="contact-card">
+                    <h3 class="form-title">Envie-nos uma mensagem</h3>
+
+                    <form action="enviar.php" method="POST">
+
+                        <div class="mb-4">
+                            <input type="text" name="nome"
+                                   class="form-control form-premium"
+                                   placeholder="Your Name" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <input type="email" name="email"
+                                   class="form-control form-premium"
+                                   placeholder="Your Email" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <input type="text" name="telefone"
+                                   class="form-control form-premium"
+                                   placeholder="Your Phone">
+                        </div>
+
+                        <div class="mb-4">
+                            <textarea name="mensagem"
+                                      class="form-control form-premium"
+                                      rows="4"
+                                      placeholder="Message"
+                                      required></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-catalog-cta w-100">
+                            Enviar Mensagem →
+                        </button>
+
+                    </form>
+                </div>
             </div>
 
-            <div class="mb-4">
-                <input type="email" name="email" class="form-control form-premium" placeholder="Your Email" required>
-            </div>
-
-            <div class="mb-4">
-                <input type="text" name="telefone" class="form-control form-premium" placeholder="Your Phone">
-            </div>
-
-            <div class="mb-4">
-                <textarea name="mensagem" class="form-control form-premium" rows="4" placeholder="Message" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-catalog-cta w-100">
-                Enviar Mensagem →
-            </button>
-        </form>
-
+        </div>
+    </div>
+</section>
     
 
 <!-- *********************************

@@ -105,3 +105,191 @@
             background-color: #d6b66a;
             color: #000;
         }
+
+
+        /* =====================================
+   ABOUT US - RESPONSIVE FIX
+===================================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    .about-hero {
+        height: 50vh;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-section .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        max-width: 70%;
+        margin: 0 auto 30px auto;
+    }
+
+    .stats-section {
+        padding: 60px 20px;
+    }
+
+    .stat-box {
+        margin-bottom: 25px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .about-hero {
+        height: 45vh;
+    }
+
+    .about-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-hero p {
+        font-size: 0.95rem;
+    }
+
+    .about-img {
+        max-width: 90%;
+    }
+
+    .gold-text {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+/* =====================================
+   ABOUT US - RESPONSIVE REFINADO
+===================================== */
+
+/* Tablet refinado */
+@media (max-width: 992px) {
+
+    .about-hero {
+        min-height: 55vh;
+        padding: 0 30px;
+    }
+
+    .about-hero-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .about-section {
+        padding: 90px 30px;
+    }
+
+    .about-section .row {
+        gap: 40px;
+    }
+
+    .about-img {
+        max-width: 65%;
+    }
+
+    .stats-section {
+        padding: 90px 30px;
+    }
+
+    .stat-number {
+        font-size: 2.1rem;
+    }
+
+    .cta-section {
+        min-height: 40vh;
+        padding: 60px 30px;
+    }
+}
+
+
+/* Mobile refinado */
+@media (max-width: 576px) {
+
+    .about-hero {
+        min-height: 55vh;
+        padding: 0 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 1.9rem;
+        line-height: 1.2;
+    }
+
+    .about-hero p {
+        font-size: 0.95rem;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .gold-text {
+        font-size: 0.7rem;
+        letter-spacing: .2em;
+    }
+
+    .about-section {
+        padding: 70px 20px;
+    }
+
+    .about-section h2 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .about-section p {
+        font-size: 0.95rem;
+    }
+
+    .about-img {
+        max-width: 85%;
+        margin-bottom: 30px;
+    }
+
+    .stats-section {
+        padding: 70px 20px;
+    }
+
+    .stat-box {
+        padding: 30px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .cta-section {
+        min-height: 45vh;
+        padding: 60px 20px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .btn-gold,
+    .btn-outline-gold {
+        width: 100%;
+    }
+
+}
